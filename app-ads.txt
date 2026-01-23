@@ -1,0 +1,9 @@
+# app-ads.txt file for AdMob verification
+# Add your AdMob publisher ID and authorized ad networks below
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, RESELLER
+
+# Example (replace with your actual AdMob publisher ID):
+# google.com, pub-0000000000000000, DIRECT, RESELLER
+
+# For more information, visit:
+# https://support.google.com/admob/answer/9363764
