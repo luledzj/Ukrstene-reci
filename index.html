@@ -1,17 +1,175 @@
 <!DOCTYPE html>
-<html lang="sr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Ukrštenica" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Ukrštenica</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrimDream Games</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            width: 90%;
+            max-width: 1400px;
+            padding: 30px 0 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 28px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a:hover { opacity: 0.6; }
+
+        .main-content {
+            width: 90%;
+            max-width: 1400px;
+            padding: 60px 0 80px;
+        }
+
+        .hero-text {
+            margin-bottom: 150px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(48px, 12vw, 120px);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 0.85;
+            letter-spacing: -4px;
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-top: 40px;
+            max-width: 700px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 1.4;
+        }
+
+        .text-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 100px;
+            margin-bottom: 100px;
+        }
+
+        .text-block span {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #888;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .text-block h2 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+            font-weight: 800;
+        }
+
+        .text-block p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .text-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #000;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 14px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            transition: opacity 0.3s;
+        }
+
+        .text-link:hover {
+            opacity: 0.5;
+        }
+
+        footer {
+            width: 90%;
+            max-width: 1400px;
+            padding: 40px 0 50px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ccc;
+            border-top: 1px solid #eee;
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+        }
+        footer a:hover { color: #000; }
+
+        @media (max-width: 768px) {
+            .text-grid { gap: 60px; }
+            .hero-text { margin-bottom: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ukrstene-reci.html">Ukrštene reči</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="hero-text">
+            <h1>GRIMDREAM<br>GAMES</h1>
+            <p>Independent studio crafting dark, atmospheric narratives and unapologetic digital experiences.</p>
+        </div>
+
+        <div class="text-grid">
+            <div class="text-block">
+                <span>01. Manifesto</span>
+                <h2>THE DARKNESS CALLS</h2>
+                <p>We believe in games that challenge the player not just mechanically, but emotionally. Our worlds are built from shadows and forgotten dreams.</p>
+            </div>
+
+            <div class="text-block">
+                <span>02. Current State</span>
+                <h2>IN DEVELOPMENT</h2>
+                <p>Working on unannounced projects that push the boundaries of isometric storytelling. More information will be revealed in due time.</p>
+            </div>
+
+            <div class="text-block">
+                <span>03. Connection</span>
+                <h2>STAY IN TOUCH</h2>
+                <p>For inquiries, collaborations, or simply to share your thoughts, our gates are always open.</p>
+                <a href="mailto:support@grimdreamgames.com" class="text-link">Send a message</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 GRIMDREAM GAMES / ALL RIGHTS RESERVED &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+
+</body>
 </html>
