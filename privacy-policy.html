@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - GrimDream Games</title>
+    <title>Privacy Policy & Terms of Service - GrimDream Games</title>
     <style>
         body {
             background-color: #ffffff;
@@ -34,10 +34,45 @@
         }
         nav a:hover { opacity: 0.6; }
 
-        .language-selector {
+        .section-selector {
             width: 90%;
             max-width: 800px;
             padding: 30px 0 20px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-btn {
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #f5f5f5;
+            color: #333;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .section-btn:hover {
+            background-color: #e8e8e8;
+            border-color: #bbb;
+        }
+
+        .section-btn.active {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .language-selector {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px 0;
             display: flex;
             gap: 12px;
             justify-content: center;
@@ -166,14 +201,19 @@
         <a href="contact.html">Contact</a>
     </nav>
 
+    <div class="section-selector">
+        <button class="section-btn active" data-section="privacy">Privacy Policy</button>
+        <button class="section-btn" data-section="terms">Terms of Service</button>
+    </div>
+
     <div class="language-selector">
         <button class="language-btn active" data-lang="sr">Srpski</button>
         <button class="language-btn" data-lang="en">English</button>
     </div>
 
     <div class="policy-container">
-        <!-- Serbian Version -->
-        <div id="content-sr" class="policy-content active">
+        <!-- Privacy Policy - Serbian -->
+        <div id="privacy-sr" class="policy-content active">
             <h1>Politika Privatnosti (Privacy Policy)</h1>
 
             <p class="last-updated"><strong>Poslednja izmena:</strong> 6. februar 2026.</p>
@@ -246,8 +286,8 @@
             <p><strong>GrimDreamGames Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
         </div>
 
-        <!-- English Version -->
-        <div id="content-en" class="policy-content">
+        <!-- Privacy Policy - English -->
+        <div id="privacy-en" class="policy-content">
             <h1>Privacy Policy</h1>
 
             <p class="last-updated"><strong>Last Updated:</strong> February 6, 2026</p>
@@ -319,22 +359,139 @@
             <p>For any questions regarding your privacy, you can contact us at:</p>
             <p><strong>GrimDreamGames Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
         </div>
+
+        <!-- Terms of Service - Serbian -->
+        <div id="terms-sr" class="policy-content">
+            <h1>Uslovi korišćenja (Terms of Service)</h1>
+
+            <p class="last-updated"><strong>Poslednja izmena:</strong> 6. februar 2026.</p>
+
+            <p>Dobrodošli u aplikaciju Ukrštene reči. Pristupanjem ili korišćenjem naše aplikacije, potvrđujete da ste pročitali, razumeli i da prihvatate ove Uslove korišćenja. Ako se ne slažete sa bilo kojim delom ovih uslova, molimo vas da ne koristite aplikaciju.</p>
+
+            <h2>1. Osnovne informacije</h2>
+            <p>Aplikacija Ukrštene reči, identifikovana paketom <code>com.grimdreamgames.ukrstenereci</code>, vlasništvo je studija GrimDreamGames (u daljem tekstu: "Developer"). Aplikacija je namenjena zabavi putem rešavanja ukrštenih reči na Android, iOS i Web platformama.</p>
+
+            <h2>2. Prihvatanje uslova i registracija</h2>
+            <ul>
+                <li><strong>Starosna granica:</strong> Korišćenjem aplikacije potvrđujete da imate najmanje 13 godina. Korisnici mlađi od 13 godina ne smeju koristiti aplikaciju bez direktnog nadzora i pristanka roditelja.</li>
+                <li><strong>Nalog:</strong> Autentifikacija se vrši putem Google OAuth sistema. Vi ste odgovorni za očuvanje bezbednosti vašeg Google naloga. Developer nije odgovoran za bilo kakav gubitak podataka proistekao iz neovlašćenog pristupa vašem nalogu.</li>
+                <li><strong>Tačnost podataka:</strong> Obavezni ste da pružite tačne informacije prilikom kreiranja profila (Display Name).</li>
+            </ul>
+
+            <h2>3. Pravila igre i napredak</h2>
+            <ul>
+                <li><strong>Sistem života:</strong> Igra počinje sa 5 života. Svaki netačan odgovor oduzima jedan život. Dodatni životi se mogu steći putem nagradnih reklama (maksimalno 10 po nivou).</li>
+                <li><strong>Sistem bodovanja:</strong> Bodovanje zavisi od brzine rešavanja i težine nivoa. Rezultati se čuvaju lokalno ili na serveru (za prijavljene korisnike).</li>
+                <li><strong>Sinhronizacija:</strong> Developer ulaže napore da obezbedi sinhronizaciju napretka putem Supabase servisa, ali ne garantuje nepovratnost podataka u slučaju tehničkih kvarova trećih strana.</li>
+            </ul>
+
+            <h2>4. Monetizacija i reklame</h2>
+            <p>Aplikacija koristi Google AdMob za prikazivanje reklama (baneri, interstitial i nagradni video snimci).</p>
+            <ul>
+                <li><strong>Nagradne reklame (Rewarded Ads):</strong> Da bi dobio nagradu (živote ili hintove), korisnik mora odgledati video do kraja. Ukoliko se reklama zatvori ranije, nagrada neće biti dodeljena.</li>
+                <li><strong>Virtuelna dobra:</strong> Hintovi i životi nemaju stvarnu novčanu vrednost, ne mogu se prenositi i ne mogu se zameniti za pravi novac.</li>
+            </ul>
+
+            <h2>5. Zabranjeno ponašanje</h2>
+            <p>Strogo je zabranjeno:</p>
+            <ul>
+                <li>Korišćenje botova, skripti ili modifikovanih (hakovanih) verzija aplikacije.</li>
+                <li>Manipulacija rezultatima na rang listi (Leaderboard).</li>
+                <li>Pokušaj pristupa tuđim podacima ili ometanje rada servera.</li>
+                <li>Korišćenje uvredljivih imena (Display Name) na rang listi.</li>
+            </ul>
+            <p><strong>Kazna:</strong> Kršenje ovih pravila može dovesti do trajne suspenzije naloga i brisanja rezultata.</p>
+
+            <h2>6. Intelektualna svojina</h2>
+            <p>Sadržaj aplikacije, uključujući dizajn, kod, logotip i same ukrštene reči, isključivo je vlasništvo studija GrimDreamGames. Zabranjeno je kopiranje, dekompajliranje (reverse engineering) ili komercijalna distribucija aplikacije bez pismene dozvole developera.</p>
+
+            <h2>7. Ograničenje odgovornosti</h2>
+            <p>Aplikacija se pruža "u viđenom stanju" (as is). Developer ne garantuje:</p>
+            <ul>
+                <li>Da će aplikacija raditi bez prekida ili grešaka.</li>
+                <li>Da su svi podaci u ukrštenicama apsolutno tačni.</li>
+                <li>Odgovornost za gubitak podataka, napretka u igri ili bilo kakvu indirektnu štetu nastalu korišćenjem trećih strana (Google, Supabase, AdMob).</li>
+            </ul>
+
+            <h2>8. Prekid usluge i izmene</h2>
+            <p>Developer zadržava pravo da u bilo kom trenutku izmeni funkcionalnosti aplikacije, privremeno obustavi rad servera radi održavanja ili trajno ugasi aplikaciju uz prethodno obaveštenje unutar aplikacije gde je to moguće.</p>
+
+            <h2>9. Važeći zakon</h2>
+            <p>Ovi uslovi se tumače u skladu sa zakonima Republike Srbije. U slučaju spora, nadležan je sud u mestu sedišta developera.</p>
+
+            <h2>10. Kontakt</h2>
+            <p>Za sva pitanja u vezi sa Uslovima korišćenja ili zahtevima za brisanje podataka, kontaktirajte nas na:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
+        </div>
+
+        <!-- Terms of Service - English -->
+        <div id="terms-en" class="policy-content">
+            <h1>Terms of Service</h1>
+
+            <p class="last-updated"><strong>Last Updated:</strong> February 6, 2026</p>
+
+            <h2>1. General Info</h2>
+            <p>This application, Ukrštene reči (<code>com.grimdreamgames.ukrstenereci</code>), is owned and operated by GrimDreamGames. By using the app, you agree to these terms.</p>
+
+            <h2>2. Requirements</h2>
+            <ul>
+                <li><strong>Age:</strong> You must be at least 13 years old.</li>
+                <li><strong>Account:</strong> You are responsible for your Google account security used for Sign-In.</li>
+            </ul>
+
+            <h2>3. Game Rules & Virtual Items</h2>
+            <ul>
+                <li><strong>Lives & Hints:</strong> These are virtual items with no real-world monetary value. They cannot be refunded or exchanged for cash.</li>
+                <li><strong>Ads:</strong> Rewarded ads must be watched in full to receive the designated reward.</li>
+            </ul>
+
+            <h2>4. Prohibited Conduct</h2>
+            <p>Cheating, hacking, using bots, or manipulating leaderboards will result in an immediate and permanent ban.</p>
+
+            <h2>5. Intellectual Property</h2>
+            <p>All content (code, design, puzzles) is the property of GrimDreamGames. Unauthorized copying or reverse engineering is prohibited.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>The app is provided "as is". We are not liable for any loss of data, progress, or service interruptions caused by third-party providers (Supabase, Google, AdMob).</p>
+
+            <h2>7. Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
+        </div>
     </div>
 
     <footer>
-        © 2026 GRIMDREAM GAMES / ALL RIGHTS RESERVED &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a>
+        © 2026 GRIMDREAM GAMES / ALL RIGHTS RESERVED &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="privacy-policy.html#terms">Terms of Service</a>
     </footer>
 
     <script>
-        // Language switching functionality
+        // Section and language switching functionality
+        const sectionButtons = document.querySelectorAll('.section-btn');
         const languageButtons = document.querySelectorAll('.language-btn');
         const contentSections = document.querySelectorAll('.policy-content');
         
-        // Load saved language preference or default to Serbian
-        const savedLang = localStorage.getItem('privacyPolicyLang') || 'sr';
+        // Load saved preferences or default to Privacy Policy in Serbian
+        const savedSection = localStorage.getItem('policySection') || 'privacy';
+        const savedLang = localStorage.getItem('policyLang') || 'sr';
+        
+        function switchSection(section) {
+            // Update section buttons
+            sectionButtons.forEach(btn => {
+                if (btn.dataset.section === section) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Save preference
+            localStorage.setItem('policySection', section);
+            
+            // Update content visibility based on current language
+            updateContentVisibility(section, savedLang);
+        }
         
         function switchLanguage(lang) {
-            // Update buttons
+            // Update language buttons
             languageButtons.forEach(btn => {
                 if (btn.dataset.lang === lang) {
                     btn.classList.add('active');
@@ -343,30 +500,47 @@
                 }
             });
             
-            // Update content visibility
-            contentSections.forEach(section => {
-                if (section.id === `content-${lang}`) {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
-            
             // Update HTML lang attribute
             document.documentElement.lang = lang === 'sr' ? 'sr' : 'en';
             
             // Save preference
-            localStorage.setItem('privacyPolicyLang', lang);
+            localStorage.setItem('policyLang', lang);
+            
+            // Update content visibility based on current section
+            const currentSection = localStorage.getItem('policySection') || 'privacy';
+            updateContentVisibility(currentSection, lang);
         }
         
-        // Add click handlers
+        function updateContentVisibility(section, lang) {
+            // Hide all content
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section and language combination
+            const targetId = `${section}-${lang}`;
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+        
+        // Add click handlers for section buttons
+        sectionButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchSection(btn.dataset.section);
+            });
+        });
+        
+        // Add click handlers for language buttons
         languageButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 switchLanguage(btn.dataset.lang);
             });
         });
         
-        // Initialize with saved preference
+        // Initialize with saved preferences
+        switchSection(savedSection);
         switchLanguage(savedLang);
     </script>
 
