@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - GrimDream Games</title>
+    <title>Politika Privatnosti - GrimDream Games</title>
     <style>
         body {
             background-color: #ffffff;
@@ -44,8 +44,15 @@
             font-size: clamp(28px, 4vw, 36px);
             font-weight: 900;
             text-transform: uppercase;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             letter-spacing: -0.5px;
+        }
+
+        .policy-container .last-updated {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
         }
 
         .policy-container h2 {
@@ -53,6 +60,13 @@
             font-weight: 700;
             margin-top: 32px;
             margin-bottom: 12px;
+        }
+
+        .policy-container h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 10px;
         }
 
         .policy-container p, .policy-container li {
@@ -64,6 +78,16 @@
 
         .policy-container ul {
             padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .policy-container a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .policy-container a:hover {
+            color: #004499;
         }
 
         footer {
@@ -92,25 +116,76 @@
     </nav>
 
     <div class="policy-container">
-        <h1>Privacy Policy</h1>
+        <h1>Politika Privatnosti (Privacy Policy)</h1>
 
-        <p><strong>Last updated:</strong> [Date]</p>
+        <p class="last-updated"><strong>Poslednja izmena:</strong> 6. februar 2026.</p>
 
-        <p>GrimDream Games ("we", "our") respects your privacy. This page describes how we collect, use, and protect your information when you use our website and games.</p>
+        <p>Dobrodošli u aplikaciju Ukrštene reči. Vaša privatnost nam je izuzetno važna. Ova Politika privatnosti objašnjava koje podatke prikupljamo, kako ih koristimo i koje korake preduzimamo kako bismo osigurali njihovu bezbednost.</p>
 
-        <h2>1. Information we collect</h2>
-        <p>We may collect information you provide directly (e.g. name, email when you contact us) and usage data (e.g. device type, game progress) where necessary for the service.</p>
+        <h2>1. Osnovne informacije</h2>
+        <p>Aplikacija Ukrštene reči (u daljem tekstu: "Aplikacija"), identifikovana paketom <code>com.grimdreamgames.ukrstenereci</code>, razvijena je od strane studija GrimDreamGames (u daljem tekstu: "mi", "nas" ili "developer"). Aplikacija je igra tipa ukrštenih reči dostupna na platformama Android, iOS i Web.</p>
 
-        <h2>2. How we use your information</h2>
-        <p>We use your information to operate our services, respond to inquiries, and improve our games and website.</p>
+        <h2>2. Podaci koje prikupljamo</h2>
+        <p>Prikupljamo određene podatke kako bismo vam omogućili nesmetano korišćenje igre, čuvanje napretka i personalizaciju iskustva.</p>
 
-        <h2>3. Third parties</h2>
-        <p>Our games may use third-party services (e.g. analytics, advertising). These services have their own privacy policies.</p>
+        <h3>A. Podaci dobijeni putem Autentifikacije (Google OAuth)</h3>
+        <p>Kada koristite Google prijavu (Sign-In), prikupljamo:</p>
+        <ul>
+            <li>Vašu email adresu;</li>
+            <li>Vaše puno ime (kako je navedeno na Google profilu);</li>
+            <li>URL vaše profilne slike;</li>
+            <li>Jedinstveni identifikator (UUID) koji generiše naš backend sistem (Supabase).</li>
+        </ul>
 
-        <h2>4. Contact</h2>
-        <p>For privacy-related questions, contact us at <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a>.</p>
+        <h3>B. Podaci o napretku u igri (Game Progress)</h3>
+        <p>Da biste mogli da nastavite igru tamo gde ste stali, čuvamo:</p>
+        <ul>
+            <li>Završene nivoe i rešene reči;</li>
+            <li>Postignute rezultate (Score) i rang na listi (Leaderboard);</li>
+            <li>Broj preostalih pomoći (Hints) i iskorišćenih reklama za živote.</li>
+        </ul>
 
-        <p><em>You can replace this placeholder text with your full privacy policy content.</em></p>
+        <h3>C. Lokalno skladištenje (LocalStorage)</h3>
+        <p>Na vašem uređaju lokalno čuvamo privremene podatke kao što su odabrano pismo (ćirilica/latinica), trenutni tajmer nivoa koji je u toku i keširane podatke rang liste radi bržeg učitavanja.</p>
+
+        <h2>3. Servisi trećih strana</h2>
+        <p>Za funkcionisanje Aplikacije koristimo proverene spoljne servise koji takođe mogu prikupljati podatke u skladu sa svojim pravilima:</p>
+        <ul>
+            <li><strong>Supabase (Backend & Auth):</strong> Koristi se za bazu podataka i čuvanje vašeg profila. Podaci su zaštićeni "Row Level Security" (RLS) tehnologijom. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Privatnost Supabase</a></li>
+            <li><strong>Google Analytics (Firebase):</strong> Prikuplja anonimne statistike o tome kako se aplikacija koristi i izveštaje o rušenju aplikacije (crash reports). <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privatnost Firebase</a></li>
+            <li><strong>Google AdMob (Reklame):</strong> Prikazuje banere, međuprostorne reklame i nagradne video snimke. AdMob može prikupljati vaš Advertising ID, IP adresu i informacije o uređaju radi serviranja reklama. <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Privatnost AdMob</a></li>
+        </ul>
+
+        <h2>4. Kako koristimo vaše podatke</h2>
+        <p>Vaše podatke koristimo isključivo za:</p>
+        <ul>
+            <li><strong>Funkcionalnost igre:</strong> Sinhronizacija napretka između različitih uređaja.</li>
+            <li><strong>Rang liste (Leaderboard):</strong> Vaše korisničko ime i ukupan skor su javno vidljivi ostalim igračima u globalnoj rang listi.</li>
+            <li><strong>Monetizaciju:</strong> Prikazivanje relevantnih reklama i dodelu nagrada (npr. dodatni životi nakon odgledane reklame).</li>
+            <li><strong>Poboljšanje aplikacije:</strong> Analiza grešaka i optimizacija težine nivoa.</li>
+        </ul>
+
+        <h2>5. Deljenje i bezbednost podataka</h2>
+        <ul>
+            <li><strong>Javni podaci:</strong> Samo vaše korisničko ime (Display Name) i ukupan rezultat su vidljivi u rang listi. Vaša email adresa nikada nije javno dostupna.</li>
+            <li><strong>Zaštita:</strong> Koristimo enkripciju i stroge protokole baze podataka kako bismo sprečili neovlašćen pristup vašim podacima.</li>
+            <li><strong>Prodaja podataka:</strong> Mi ne prodajemo vaše lične podatke trećim licima.</li>
+        </ul>
+
+        <h2>6. Prava korisnika i brisanje podataka</h2>
+        <p>Vi imate punu kontrolu nad svojim podacima:</p>
+        <ul>
+            <li><strong>Resetovanje napretka:</strong> Unutar aplikacije možete resetovati svoj napredak.</li>
+            <li><strong>Brisanje naloga:</strong> Možete podneti zahtev za trajno brisanje vašeg naloga i svih povezanih podataka slanjem upita na naš kontakt email.</li>
+            <li><strong>Isključivanje personalizovanih reklama:</strong> Možete onemogućiti personalizovane reklame u podešavanjima vašeg Android ili iOS uređaja.</li>
+        </ul>
+
+        <h2>7. Privatnost dece</h2>
+        <p>Aplikacija nije direktno namenjena deci mlađoj od 13 godina. Ne prikupljamo svesno podatke o deci. Ukoliko smatrate da smo slučajno prikupili podatke o maloletnom licu, molimo vas da nas kontaktirate radi hitnog brisanja.</p>
+
+        <h2>8. Kontakt</h2>
+        <p>Za sva pitanja u vezi sa vašom privatnošću, možete nas kontaktirati na:</p>
+        <p><strong>GrimDreamGames Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
     </div>
 
     <footer>
