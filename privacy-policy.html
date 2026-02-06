@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politika Privatnosti - GrimDream Games</title>
+    <title>Privacy Policy - GrimDream Games</title>
     <style>
         body {
             background-color: #ffffff;
@@ -34,10 +34,53 @@
         }
         nav a:hover { opacity: 0.6; }
 
+        .language-selector {
+            width: 90%;
+            max-width: 800px;
+            padding: 30px 0 20px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .language-btn {
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #f5f5f5;
+            color: #333;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .language-btn:hover {
+            background-color: #e8e8e8;
+            border-color: #bbb;
+        }
+
+        .language-btn.active {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
         .policy-container {
             width: 90%;
             max-width: 800px;
             padding: 60px 0 80px;
+        }
+
+        .policy-content {
+            display: none;
+        }
+
+        .policy-content.active {
+            display: block;
         }
 
         .policy-container h1 {
@@ -81,6 +124,14 @@
             margin-bottom: 16px;
         }
 
+        .policy-container code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
         .policy-container a {
             color: #0066cc;
             text-decoration: underline;
@@ -115,82 +166,209 @@
         <a href="contact.html">Contact</a>
     </nav>
 
+    <div class="language-selector">
+        <button class="language-btn active" data-lang="sr">Srpski</button>
+        <button class="language-btn" data-lang="en">English</button>
+    </div>
+
     <div class="policy-container">
-        <h1>Politika Privatnosti (Privacy Policy)</h1>
+        <!-- Serbian Version -->
+        <div id="content-sr" class="policy-content active">
+            <h1>Politika Privatnosti (Privacy Policy)</h1>
 
-        <p class="last-updated"><strong>Poslednja izmena:</strong> 6. februar 2026.</p>
+            <p class="last-updated"><strong>Poslednja izmena:</strong> 6. februar 2026.</p>
 
-        <p>Dobrodošli u aplikaciju Ukrštene reči. Vaša privatnost nam je izuzetno važna. Ova Politika privatnosti objašnjava koje podatke prikupljamo, kako ih koristimo i koje korake preduzimamo kako bismo osigurali njihovu bezbednost.</p>
+            <p>Dobrodošli u aplikaciju Ukrštene reči. Vaša privatnost nam je izuzetno važna. Ova Politika privatnosti objašnjava koje podatke prikupljamo, kako ih koristimo i koje korake preduzimamo kako bismo osigurali njihovu bezbednost.</p>
 
-        <h2>1. Osnovne informacije</h2>
-        <p>Aplikacija Ukrštene reči (u daljem tekstu: "Aplikacija"), identifikovana paketom <code>com.grimdreamgames.ukrstenereci</code>, razvijena je od strane studija GrimDreamGames (u daljem tekstu: "mi", "nas" ili "developer"). Aplikacija je igra tipa ukrštenih reči dostupna na platformama Android, iOS i Web.</p>
+            <h2>1. Osnovne informacije</h2>
+            <p>Aplikacija Ukrštene reči (u daljem tekstu: "Aplikacija"), identifikovana paketom <code>com.grimdreamgames.ukrstenereci</code>, razvijena je od strane studija GrimDreamGames (u daljem tekstu: "mi", "nas" ili "developer"). Aplikacija je igra tipa ukrštenih reči dostupna na platformama Android, iOS i Web.</p>
 
-        <h2>2. Podaci koje prikupljamo</h2>
-        <p>Prikupljamo određene podatke kako bismo vam omogućili nesmetano korišćenje igre, čuvanje napretka i personalizaciju iskustva.</p>
+            <h2>2. Podaci koje prikupljamo</h2>
+            <p>Prikupljamo određene podatke kako bismo vam omogućili nesmetano korišćenje igre, čuvanje napretka i personalizaciju iskustva.</p>
 
-        <h3>A. Podaci dobijeni putem Autentifikacije (Google OAuth)</h3>
-        <p>Kada koristite Google prijavu (Sign-In), prikupljamo:</p>
-        <ul>
-            <li>Vašu email adresu;</li>
-            <li>Vaše puno ime (kako je navedeno na Google profilu);</li>
-            <li>URL vaše profilne slike;</li>
-            <li>Jedinstveni identifikator (UUID) koji generiše naš backend sistem (Supabase).</li>
-        </ul>
+            <h3>A. Podaci dobijeni putem Autentifikacije (Google OAuth)</h3>
+            <p>Kada koristite Google prijavu (Sign-In), prikupljamo:</p>
+            <ul>
+                <li>Vašu email adresu;</li>
+                <li>Vaše puno ime (kako je navedeno na Google profilu);</li>
+                <li>URL vaše profilne slike;</li>
+                <li>Jedinstveni identifikator (UUID) koji generiše naš backend sistem (Supabase).</li>
+            </ul>
 
-        <h3>B. Podaci o napretku u igri (Game Progress)</h3>
-        <p>Da biste mogli da nastavite igru tamo gde ste stali, čuvamo:</p>
-        <ul>
-            <li>Završene nivoe i rešene reči;</li>
-            <li>Postignute rezultate (Score) i rang na listi (Leaderboard);</li>
-            <li>Broj preostalih pomoći (Hints) i iskorišćenih reklama za živote.</li>
-        </ul>
+            <h3>B. Podaci o napretku u igri (Game Progress)</h3>
+            <p>Da biste mogli da nastavite igru tamo gde ste stali, čuvamo:</p>
+            <ul>
+                <li>Završene nivoe i rešene reči;</li>
+                <li>Postignute rezultate (Score) i rang na listi (Leaderboard);</li>
+                <li>Broj preostalih pomoći (Hints) i iskorišćenih reklama za živote.</li>
+            </ul>
 
-        <h3>C. Lokalno skladištenje (LocalStorage)</h3>
-        <p>Na vašem uređaju lokalno čuvamo privremene podatke kao što su odabrano pismo (ćirilica/latinica), trenutni tajmer nivoa koji je u toku i keširane podatke rang liste radi bržeg učitavanja.</p>
+            <h3>C. Lokalno skladištenje (LocalStorage)</h3>
+            <p>Na vašem uređaju lokalno čuvamo privremene podatke kao što su odabrano pismo (ćirilica/latinica), trenutni tajmer nivoa koji je u toku i keširane podatke rang liste radi bržeg učitavanja.</p>
 
-        <h2>3. Servisi trećih strana</h2>
-        <p>Za funkcionisanje Aplikacije koristimo proverene spoljne servise koji takođe mogu prikupljati podatke u skladu sa svojim pravilima:</p>
-        <ul>
-            <li><strong>Supabase (Backend & Auth):</strong> Koristi se za bazu podataka i čuvanje vašeg profila. Podaci su zaštićeni "Row Level Security" (RLS) tehnologijom. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Privatnost Supabase</a></li>
-            <li><strong>Google Analytics (Firebase):</strong> Prikuplja anonimne statistike o tome kako se aplikacija koristi i izveštaje o rušenju aplikacije (crash reports). <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privatnost Firebase</a></li>
-            <li><strong>Google AdMob (Reklame):</strong> Prikazuje banere, međuprostorne reklame i nagradne video snimke. AdMob može prikupljati vaš Advertising ID, IP adresu i informacije o uređaju radi serviranja reklama. <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Privatnost AdMob</a></li>
-        </ul>
+            <h2>3. Servisi trećih strana</h2>
+            <p>Za funkcionisanje Aplikacije koristimo proverene spoljne servise koji takođe mogu prikupljati podatke u skladu sa svojim pravilima:</p>
+            <ul>
+                <li><strong>Supabase (Backend & Auth):</strong> Koristi se za bazu podataka i čuvanje vašeg profila. Podaci su zaštićeni "Row Level Security" (RLS) tehnologijom. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Privatnost Supabase</a></li>
+                <li><strong>Google Analytics (Firebase):</strong> Prikuplja anonimne statistike o tome kako se aplikacija koristi i izveštaje o rušenju aplikacije (crash reports). <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privatnost Firebase</a></li>
+                <li><strong>Google AdMob (Reklame):</strong> Prikazuje banere, međuprostorne reklame i nagradne video snimke. AdMob može prikupljati vaš Advertising ID, IP adresu i informacije o uređaju radi serviranja reklama. <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">Privatnost AdMob</a></li>
+            </ul>
 
-        <h2>4. Kako koristimo vaše podatke</h2>
-        <p>Vaše podatke koristimo isključivo za:</p>
-        <ul>
-            <li><strong>Funkcionalnost igre:</strong> Sinhronizacija napretka između različitih uređaja.</li>
-            <li><strong>Rang liste (Leaderboard):</strong> Vaše korisničko ime i ukupan skor su javno vidljivi ostalim igračima u globalnoj rang listi.</li>
-            <li><strong>Monetizaciju:</strong> Prikazivanje relevantnih reklama i dodelu nagrada (npr. dodatni životi nakon odgledane reklame).</li>
-            <li><strong>Poboljšanje aplikacije:</strong> Analiza grešaka i optimizacija težine nivoa.</li>
-        </ul>
+            <h2>4. Kako koristimo vaše podatke</h2>
+            <p>Vaše podatke koristimo isključivo za:</p>
+            <ul>
+                <li><strong>Funkcionalnost igre:</strong> Sinhronizacija napretka između različitih uređaja.</li>
+                <li><strong>Rang liste (Leaderboard):</strong> Vaše korisničko ime i ukupan skor su javno vidljivi ostalim igračima u globalnoj rang listi.</li>
+                <li><strong>Monetizaciju:</strong> Prikazivanje relevantnih reklama i dodelu nagrada (npr. dodatni životi nakon odgledane reklame).</li>
+                <li><strong>Poboljšanje aplikacije:</strong> Analiza grešaka i optimizacija težine nivoa.</li>
+            </ul>
 
-        <h2>5. Deljenje i bezbednost podataka</h2>
-        <ul>
-            <li><strong>Javni podaci:</strong> Samo vaše korisničko ime (Display Name) i ukupan rezultat su vidljivi u rang listi. Vaša email adresa nikada nije javno dostupna.</li>
-            <li><strong>Zaštita:</strong> Koristimo enkripciju i stroge protokole baze podataka kako bismo sprečili neovlašćen pristup vašim podacima.</li>
-            <li><strong>Prodaja podataka:</strong> Mi ne prodajemo vaše lične podatke trećim licima.</li>
-        </ul>
+            <h2>5. Deljenje i bezbednost podataka</h2>
+            <ul>
+                <li><strong>Javni podaci:</strong> Samo vaše korisničko ime (Display Name) i ukupan rezultat su vidljivi u rang listi. Vaša email adresa nikada nije javno dostupna.</li>
+                <li><strong>Zaštita:</strong> Koristimo enkripciju i stroge protokole baze podataka kako bismo sprečili neovlašćen pristup vašim podacima.</li>
+                <li><strong>Prodaja podataka:</strong> Mi ne prodajemo vaše lične podatke trećim licima.</li>
+            </ul>
 
-        <h2>6. Prava korisnika i brisanje podataka</h2>
-        <p>Vi imate punu kontrolu nad svojim podacima:</p>
-        <ul>
-            <li><strong>Resetovanje napretka:</strong> Unutar aplikacije možete resetovati svoj napredak.</li>
-            <li><strong>Brisanje naloga:</strong> Možete podneti zahtev za trajno brisanje vašeg naloga i svih povezanih podataka slanjem upita na naš kontakt email.</li>
-            <li><strong>Isključivanje personalizovanih reklama:</strong> Možete onemogućiti personalizovane reklame u podešavanjima vašeg Android ili iOS uređaja.</li>
-        </ul>
+            <h2>6. Prava korisnika i brisanje podataka</h2>
+            <p>Vi imate punu kontrolu nad svojim podacima:</p>
+            <ul>
+                <li><strong>Resetovanje napretka:</strong> Unutar aplikacije možete resetovati svoj napredak.</li>
+                <li><strong>Brisanje naloga:</strong> Možete podneti zahtev za trajno brisanje vašeg naloga i svih povezanih podataka slanjem upita na naš kontakt email.</li>
+                <li><strong>Isključivanje personalizovanih reklama:</strong> Možete onemogućiti personalizovane reklame u podešavanjima vašeg Android ili iOS uređaja.</li>
+            </ul>
 
-        <h2>7. Privatnost dece</h2>
-        <p>Aplikacija nije direktno namenjena deci mlađoj od 13 godina. Ne prikupljamo svesno podatke o deci. Ukoliko smatrate da smo slučajno prikupili podatke o maloletnom licu, molimo vas da nas kontaktirate radi hitnog brisanja.</p>
+            <h2>7. Privatnost dece</h2>
+            <p>Aplikacija nije direktno namenjena deci mlađoj od 13 godina. Ne prikupljamo svesno podatke o deci. Ukoliko smatrate da smo slučajno prikupili podatke o maloletnom licu, molimo vas da nas kontaktirate radi hitnog brisanja.</p>
 
-        <h2>8. Kontakt</h2>
-        <p>Za sva pitanja u vezi sa vašom privatnošću, možete nas kontaktirati na:</p>
-        <p><strong>GrimDreamGames Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
+            <h2>8. Kontakt</h2>
+            <p>Za sva pitanja u vezi sa vašom privatnošću, možete nas kontaktirati na:</p>
+            <p><strong>GrimDreamGames Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
+        </div>
+
+        <!-- English Version -->
+        <div id="content-en" class="policy-content">
+            <h1>Privacy Policy</h1>
+
+            <p class="last-updated"><strong>Last Updated:</strong> February 6, 2026</p>
+
+            <p>Welcome to the Ukrštene reči application. Your privacy is of the utmost importance to us. This Privacy Policy explains what data we collect, how we use it, and the steps we take to ensure its security.</p>
+
+            <h2>1. General Information</h2>
+            <p>The application Ukrštene reči (hereinafter: "Application"), identified by the package name <code>com.grimdreamgames.ukrstenereci</code>, is developed by GrimDreamGames studio (hereinafter: "we", "us", or "the developer"). The Application is a crossword puzzle game available on Android, iOS, and Web platforms.</p>
+
+            <h2>2. Data We Collect</h2>
+            <p>We collect certain data to provide you with a seamless gaming experience, progress synchronization, and personalized features.</p>
+
+            <h3>A. Authentication Data (Google OAuth)</h3>
+            <p>When you use Google Sign-In, we collect:</p>
+            <ul>
+                <li>Your email address;</li>
+                <li>Your full name (as provided on your Google profile);</li>
+                <li>Your profile picture URL;</li>
+                <li>A unique identifier (UUID) generated by our backend system (Supabase).</li>
+            </ul>
+
+            <h3>B. Game Progress Data</h3>
+            <p>To allow you to resume your game across devices, we store:</p>
+            <ul>
+                <li>Completed levels and solved words;</li>
+                <li>Scores and global leaderboard rankings;</li>
+                <li>Remaining hints and rewarded ad usage for lives.</li>
+            </ul>
+
+            <h3>C. Local Storage</h3>
+            <p>We store temporary data locally on your device, such as your preferred script (Cyrillic/Latin), active level timers, and cached leaderboard data for faster loading times.</p>
+
+            <h2>3. Third-Party Services</h2>
+            <p>To function effectively, the Application uses trusted third-party services that may collect data in accordance with their own policies:</p>
+            <ul>
+                <li><strong>Supabase (Backend & Auth):</strong> Used for our database and profile storage. Data is protected by Row Level Security (RLS) technology. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a></li>
+                <li><strong>Google Analytics (Firebase):</strong> Collects anonymous statistics on app usage and crash reports to help us improve performance. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy Policy</a></li>
+                <li><strong>Google AdMob (Advertising):</strong> Displays banners, interstitials, and rewarded videos. AdMob may collect your Advertising ID, IP address, and device information to serve relevant ads. <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">AdMob Privacy Policy</a></li>
+            </ul>
+
+            <h2>4. How We Use Your Data</h2>
+            <p>We use your data strictly for:</p>
+            <ul>
+                <li><strong>Game Functionality:</strong> Synchronizing progress across multiple devices.</li>
+                <li><strong>Leaderboards:</strong> Your display name and total score are publicly visible to other players in the global rankings.</li>
+                <li><strong>Monetization:</strong> Displaying relevant advertisements and granting rewards (e.g., extra lives after watching a video).</li>
+                <li><strong>App Improvement:</strong> Analyzing errors and optimizing level difficulty.</li>
+            </ul>
+
+            <h2>5. Data Sharing and Security</h2>
+            <ul>
+                <li><strong>Public Data:</strong> Only your Display Name and total score are visible on the leaderboard. Your email address is never made public.</li>
+                <li><strong>Security:</strong> We use encryption and strict database protocols to prevent unauthorized access to your data.</li>
+                <li><strong>Data Selling:</strong> We do not sell your personal data to third parties.</li>
+            </ul>
+
+            <h2>6. User Rights and Data Deletion</h2>
+            <p>You have full control over your data:</p>
+            <ul>
+                <li><strong>Reset Progress:</strong> You can reset your game progress within the application settings.</li>
+                <li><strong>Account Deletion:</strong> You may request the permanent deletion of your account and all associated data by contacting us via email.</li>
+                <li><strong>Opt-out of Personalized Ads:</strong> You can disable personalized advertising through your Android or iOS device settings.</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            <p>The Application is not directly intended for children under the age of 13. We do not knowingly collect data from children. If you believe we have inadvertently collected data from a minor, please contact us for immediate removal.</p>
+
+            <h2>8. Contact Us</h2>
+            <p>For any questions regarding your privacy, you can contact us at:</p>
+            <p><strong>GrimDreamGames Email:</strong> <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a></p>
+        </div>
     </div>
 
     <footer>
         © 2026 GRIMDREAM GAMES / ALL RIGHTS RESERVED &nbsp;·&nbsp; <a href="privacy-policy.html">Privacy Policy</a>
     </footer>
+
+    <script>
+        // Language switching functionality
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.policy-content');
+        
+        // Load saved language preference or default to Serbian
+        const savedLang = localStorage.getItem('privacyPolicyLang') || 'sr';
+        
+        function switchLanguage(lang) {
+            // Update buttons
+            languageButtons.forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Update content visibility
+            contentSections.forEach(section => {
+                if (section.id === `content-${lang}`) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'sr' ? 'sr' : 'en';
+            
+            // Save preference
+            localStorage.setItem('privacyPolicyLang', lang);
+        }
+        
+        // Add click handlers
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+        
+        // Initialize with saved preference
+        switchLanguage(savedLang);
+    </script>
 
 </body>
 </html>
