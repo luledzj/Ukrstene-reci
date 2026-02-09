@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion Request - GrimDream Games</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            width: 90%;
+            max-width: 1400px;
+            padding: 30px 0 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 28px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav a:hover { opacity: 0.6; }
+
+        .language-selector {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px 0;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .language-btn {
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #f5f5f5;
+            color: #333;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .language-btn:hover {
+            background-color: #e8e8e8;
+            border-color: #bbb;
+        }
+
+        .language-btn.active {
+            background-color: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+        .content-container {
+            width: 90%;
+            max-width: 800px;
+            padding: 60px 0 80px;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .content-container h1 {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .content-container h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        .content-container p, .content-container li {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .content-container ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .content-container a {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+
+        .content-container a:hover {
+            color: #004499;
+        }
+
+        .email-box {
+            background-color: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 24px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .email-box strong {
+            color: #000;
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #856404;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background-color: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #004085;
+        }
+
+        footer {
+            width: 90%;
+            max-width: 1400px;
+            padding: 30px 0 50px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ccc;
+            border-top: 1px solid #eee;
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+        }
+        footer a:hover { color: #000; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ukrstene-reci.html">Ukrštene reči</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+
+    <div class="language-selector">
+        <button class="language-btn active" data-lang="sr">Srpski</button>
+        <button class="language-btn" data-lang="en">English</button>
+    </div>
+
+    <div class="content-container">
+        <!-- Serbian Content -->
+        <div id="content-sr" class="content-section active">
+            <h1>Zahtev za brisanje naloga</h1>
+
+            <p>Poštovani korisnici,</p>
+
+            <p>Ako želite da obrišete svoj nalog u igri <strong>Ukrštene reči</strong>, molimo vas da nas kontaktirate putem email-a.</p>
+
+            <h2>Kako poslati zahtev</h2>
+
+            <p>Pošaljite email na sledeću adresu:</p>
+
+            <div class="email-box">
+                <strong>Email adresa:</strong> <a href="mailto:support@grimdreamgames.com?subject=Brisanje naloga">support@grimdreamgames.com</a><br>
+                <strong>Predmet:</strong> Brisanje naloga
+            </div>
+
+            <p>U email-u molimo vas da navedete:</p>
+            <ul>
+                <li>Vašu email adresu koju koristite za prijavu u igru</li>
+                <li>Potvrdu da želite da obrišete nalog</li>
+            </ul>
+
+            <div class="warning-box">
+                <p>⚠️ VAŽNO: Brisanje naloga je trajno i ne može se poništiti.</p>
+            </div>
+
+            <h2>Šta će biti obrisano</h2>
+
+            <p>Nakon što primimo vaš zahtev, uklonićemo sledeće podatke:</p>
+
+            <ul>
+                <li>Sve vaše podatke o napretku u igri (završeni nivoi, rešene reči)</li>
+                <li>Sve vaše rezultate i skorove</li>
+                <li>Vašu poziciju na rang listi</li>
+                <li>Sve lične podatke povezane sa vašim nalogom</li>
+            </ul>
+
+            <div class="info-box">
+                <p>📅 <strong>Rok za brisanje:</strong> Svi podaci će biti trajno obrisani u roku od <strong>7 dana</strong> od primanja vašeg zahteva.</p>
+            </div>
+
+            <h2>Dodatne informacije</h2>
+
+            <p>Ako imate dodatnih pitanja ili problema, možete nas kontaktirati na <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a>.</p>
+
+            <p>Hvala vam što ste igrali <strong>Ukrštene reči</strong>!</p>
+        </div>
+
+        <!-- English Content -->
+        <div id="content-en" class="content-section">
+            <h1>Account Deletion Request</h1>
+
+            <p>Dear users,</p>
+
+            <p>If you wish to delete your account in the game <strong>Ukrštene reči</strong>, please contact us via email.</p>
+
+            <h2>How to Submit a Request</h2>
+
+            <p>Send an email to the following address:</p>
+
+            <div class="email-box">
+                <strong>Email address:</strong> <a href="mailto:support@grimdreamgames.com?subject=Account Deletion">support@grimdreamgames.com</a><br>
+                <strong>Subject:</strong> Account Deletion
+            </div>
+
+            <p>In your email, please include:</p>
+            <ul>
+                <li>Your email address used to sign in to the game</li>
+                <li>Confirmation that you wish to delete your account</li>
+            </ul>
+
+            <div class="warning-box">
+                <p>⚠️ IMPORTANT: Account deletion is permanent and cannot be undone.</p>
+            </div>
+
+            <h2>What Will Be Deleted</h2>
+
+            <p>After we receive your request, we will remove the following data:</p>
+
+            <ul>
+                <li>All your game progress data (completed levels, solved words)</li>
+                <li>All your scores and results</li>
+                <li>Your position on the leaderboard</li>
+                <li>All personal data associated with your account</li>
+            </ul>
+
+            <div class="info-box">
+                <p>📅 <strong>Deletion timeframe:</strong> All data will be permanently removed within <strong>7 days</strong> of receiving your request.</p>
+            </div>
+
+            <h2>Additional Information</h2>
+
+            <p>If you have any additional questions or concerns, you can contact us at <a href="mailto:support@grimdreamgames.com">support@grimdreamgames.com</a>.</p>
+
+            <p>Thank you for playing <strong>Ukrštene reči</strong>!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GrimDream Games. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.querySelectorAll('.language-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                
+                // Update active button
+                document.querySelectorAll('.language-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Show/hide content sections
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(`content-${lang}`).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
